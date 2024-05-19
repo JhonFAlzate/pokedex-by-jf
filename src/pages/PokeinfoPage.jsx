@@ -59,14 +59,24 @@ console.log(pokemon)
           <div className="info_card_ul_container">
 
               <ul className="info_card_types_box">
-                <li className="info_card_types1"><span className="info_card_1">{pokemon?.types[0].type.name}</span></li>
-                <li className="info_card_types2"><span className="info_card_2">{pokemon?.types[1].type.name}</span></li>
+                {
+                  pokemon?.types.map( type => (
+
+                    <li className="info_card_types1" key={type.type.url}><span className="info_card_1">{type.type.name}</span></li>
+                  ))
+                }
+              
               </ul>
 
 
               <ul className="info_card_types_box">
-                <li className="info_card_abilities1">{pokemon?.abilities[0].ability.name}</li>
-                <li className="info_card_abilities1">{pokemon?.abilities[1].ability.name}</li>
+                {
+                  pokemon?.abilities.map(ability => (
+                    
+                    <li className="info_card_abilities1" key={ability.ability.url}>{ability.ability.name}</li>
+                  ))
+                }
+                
               </ul>
           </div>
 
