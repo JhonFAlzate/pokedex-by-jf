@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import UseFetch from "../hooks/UseFetch"
 import { useEffect } from "react"
 import '../components/styles/PokeinfoPage.css'
+import HeaderPages from "../components/HeaderPages"
 
 
 const PokeinfoPage = ({}) => {
@@ -19,18 +20,7 @@ console.log(pokemon)
 
   return (
     <article>
-      <header className="header">
-          <div className="header_home_red"></div>
-          <div className="header_home_black"></div>
-          <img className="header_img" src="/pokedex1.png" alt="/pokedex1.png" />
-              <div className="header_home_circle">
-                  <div className="header_home_circle_two">
-                      <div className="header_home_circle_3">
-                          <div className="header_home_circle_4"></div>
-                  </div>
-              </div>
-          </div>   
-      </header>
+      <HeaderPages />
 
       <body className="info_body">
 
@@ -79,10 +69,11 @@ console.log(pokemon)
                 
               </ul>
           </div>
-
-          <h3 className="info_card_stats">Stats</h3>
-          
-          <hr className="info_card_stats_hr" />
+            <div className="info_card_stats_container">
+                <h3 className="info_card_stats">Stats</h3>
+                <hr className="info_card_stats_hr" />
+                <img className="info_card_stats_img" src="/Group 232.png" alt="/Group 232.png" />
+            </div>
 
           <ul className="info_card_stats_box">
               {
@@ -97,10 +88,13 @@ console.log(pokemon)
         </section>
 
         <div className="info_move_container">
-          <h3 className="info_move_title">Movements</h3>
-          <hr className="info_move_hr" />
+        <div className="info_card_stats_container">
+                <h3 className="info_card_stats">Movements</h3>
+                <hr className="info_card_stats_hr" />
+                <img className="info_card_stats_img" src="/Group 232.png" alt="/Group 232.png" />
+            </div>
 
-          <ul className="info_move_ul">
+           <ul className="info_move_ul">
               {
                 pokemon?.moves.map(statInfo => (
                   <li className="info_move_list" key={statInfo.move.url}><span className="stats_label">{statInfo.move.name} </span ></li>

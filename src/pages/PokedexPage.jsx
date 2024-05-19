@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import PokeCard from "../components/PokedexPage/PokeCard"
 import SelectType from "../components/PokedexPage/SelectType"
 import '../components/styles/PokedexPage.css'
+import HeaderPages from "../components/HeaderPages"
 
 
 const PokedexPage = () => {
@@ -45,18 +46,7 @@ const callbackFilter = poke => {
     
     <div className="two_container">
       
-      <header className="header">
-          <div className="header_home_red"></div>
-          <div className="header_home_black"></div>
-          <img className="header_img" src="/pokedex1.png" alt="/pokedex1.png" />
-              <div className="header_home_circle">
-                  <div className="header_home_circle_two">
-                      <div className="header_home_circle_3">
-                          <div className="header_home_circle_4"></div>
-                  </div>
-              </div>
-          </div>   
-      </header>
+      <HeaderPages />
         <body className="two_body">
           
         <p className="two_welcome"><span className="two_welcom">Welcome {trainer}</span>, <span className="two_welcom_p">here you will find your favorite pokemon</span></p>
