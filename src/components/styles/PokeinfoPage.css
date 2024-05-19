@@ -193,14 +193,6 @@
     text-align: center;
    
 }
-/* .info_card_1 {
-    
-   
-}
-.info_card_2 {
-    width: 100%;
-    background-color: #6C3D9A;
-} */
 
 .info_card_abilities1 {
     font-size: 0.7em; 
@@ -247,8 +239,8 @@
     border-radius: 0.1em;
     overflow: hidden;
     padding: 1em;
-    display: grid;
-   flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1em;
 }
 .info_move_hr {
@@ -256,20 +248,23 @@
     width: 50%;
     margin-top: 1em;
     margin-bottom: 1em;
-    border-color: #7771;
+    border-color: #7775;
 }
 .info_move_ul {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    gap: 0.3em;
 }
 .info_move_list {
     
-    padding: 0.2em;
+    padding: 0.1em;
     gap: 1em;
     background-color: rgb(226, 224, 224);
     align-items: center;

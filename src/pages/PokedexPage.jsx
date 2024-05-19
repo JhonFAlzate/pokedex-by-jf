@@ -26,7 +26,7 @@ if(typeSelect === 'allPokemons') {
 
 },[typeSelect])
 
-console.log(pokemons)
+
 
 const inputName = useRef()
 
